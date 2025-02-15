@@ -1,0 +1,4 @@
+#This assignment contains the following:
+1- Flask api that contains a post request to call the vaderSentiment model 
+2- Nodejs api that calls the flask api  internally
+3- Pushing this assignment to github after finishing with a .gitignore
