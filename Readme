@@ -2,3 +2,9 @@
 1- Flask api that contains a post request to call the vaderSentiment model 
 2- Nodejs api that calls the flask api  internally
 3- Pushing this assignment to github after finishing with a .gitignore
+
+#Assignment 2 contains the following updates:
+1-create a dockerfile for the flask api server
+2-create dockerfile for the nodejs api server
+3-create docker-compose.yaml with the correct configurations to create 2 containers for both 
+servers 

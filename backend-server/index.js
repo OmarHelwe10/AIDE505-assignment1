@@ -5,7 +5,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const PORT = 3000;
-const FLASK_API_URL = "http://127.0.0.1:5000/predict"; // Flask API endpoint
+const FLASK_API_URL = "http://flask-api:5000/predict"; // Flask API endpoint using Docker network
 
 
 app.post("/analyze-sentiment", async (req, res) => {

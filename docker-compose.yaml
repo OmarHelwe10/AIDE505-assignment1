@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  flask-api:
+    build: ./ml-server  
+    ports:
+      - "5000:5000"  # Expose Flask on port 5000
+    networks:
+      - app-network  # Connect to a custom network (defined below)
+
+  express-api:
+    build: ./backend-server  
+    ports:
+      - "3000:3000"  # Expose Express on port 3000
+    depends_on:
+      - flask-api  # Ensure Flask starts first
+    networks:
+      - app-network  # Connect to the same network as Flask
+
+# Define a custom network to allow inter-service communication
+networks:
+  app-network:
+    driver: bridge  # Default network driver (allows containers to communicate)
